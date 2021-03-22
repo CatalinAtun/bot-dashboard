@@ -1,12 +1,15 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
+import { CornponentsTheme, Normalize } from '@cornershop/cornponents';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <CornponentsTheme>
+      <Normalize />
+      <App />
+    </CornponentsTheme>
   </React.StrictMode>,
   document.getElementById('root')
 );
