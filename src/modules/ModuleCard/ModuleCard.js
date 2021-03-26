@@ -18,7 +18,7 @@ const renderScoreIcon = (score) => {
     }
 }
 
-const ModuleCard = ({ avatar, fullName, score, firstPlace, secondPlace }) => {
+const ModuleCard = ({ avatar, full_name, score, first_place, second_place }) => {
     return (
         <Spacing py="small">
             <st.Container>
@@ -28,7 +28,7 @@ const ModuleCard = ({ avatar, fullName, score, firstPlace, secondPlace }) => {
                             <st.Image src={avatar} alt="profile-photo"/>
                         </Inline>
                         <Spacing p="small">
-                        <Text align="center" weight="medium" color="black400" size="lg">{fullName}</Text>
+                        <Text align="center" weight="medium" color="black400" size="lg">{full_name}</Text>
                         </Spacing>
                         <Columns align="center">
                             <Column width="4/12">
@@ -43,7 +43,7 @@ const ModuleCard = ({ avatar, fullName, score, firstPlace, secondPlace }) => {
                                 <Tooltip tooltip="First place">
                                     <Inline alignY="center" space="xxsmall" align="center">
                                         <FirstPlace />
-                                        <Text data-testid="first-place">{firstPlace ?? '--'}</Text>
+                                        <Text data-testid="first-place">{first_place ?? '--'}</Text>
                                     </Inline>
                                 </Tooltip>
                             </Column>
@@ -51,7 +51,7 @@ const ModuleCard = ({ avatar, fullName, score, firstPlace, secondPlace }) => {
                                 <Tooltip tooltip="Second place">
                                     <Inline alignY="center" space="xxsmall" align="center">
                                         <SecondPlace />
-                                        <Text data-testid="second-place">{secondPlace ?? '--'}</Text>
+                                        <Text data-testid="second-place">{second_place ?? '--'}</Text>
                                     </Inline>
                                 </Tooltip>
                             </Column>
@@ -65,20 +65,20 @@ const ModuleCard = ({ avatar, fullName, score, firstPlace, secondPlace }) => {
 
 ModuleCard.propTypes = {
     avatar: PropTypes.string,
-    fullName: PropTypes.string,
-    firstName: PropTypes.string,
+    full_name: PropTypes.string,
+    first_name: PropTypes.string,
     score: PropTypes.number,
-    firstPlace: PropTypes.number,
-    secondPlace: PropTypes.number
+    first_place: PropTypes.number,
+    second_place: PropTypes.number
 }
 
 ModuleCard.defaultProps = {
     avatar: null,
-    fullName: null,
-    firstName: null,
+    full_name: null,
+    first_name: null,
     score: 0,
-    firstPlace: 0,
-    secondPlace: 0
+    first_place: 0,
+    second_place: 0
 }
 
 export default ModuleCard;
