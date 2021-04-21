@@ -3,7 +3,7 @@ import PropTypes from 'prop-types';
 import goldMedal from '../../assets/firstPlace.svg';
 
 const FirstPlace = ({ width }) => {
-   return <img src={goldMedal} width={width} className="App-logo" alt="logo" />
+   return <img src={goldMedal} width={width} alt="first-place-icon" />
 }
 
 FirstPlace.propTypes = {

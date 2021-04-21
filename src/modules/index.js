@@ -1,3 +1,3 @@
-import { ModuleCard } from './ModuleCard/ModuleCard';
+import ModuleCard from './ModuleCard/ModuleCard';
 
 export default ModuleCard;
