@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable react/react-in-jsx-scope */
 import { render, screen } from '@testing-library/react';
 import { CornponentsTheme } from '@cornershop/cornponents';
 
@@ -25,11 +27,11 @@ describe('basic behaviour of module', () => {
   });
   
   test('render with default props', () => {
-    expect(renderThemed(defaultProps)).toBeDefined();
+    expect(renderThemed(...defaultProps)).toBeDefined();
   });
   
   test('render with empty props', () => {
-    expect(renderThemed(emptyProps)).toBeDefined();
+    expect(renderThemed(...emptyProps)).toBeDefined();
   });
 })
 

@@ -1,3 +1,5 @@
+/* eslint-disable no-undef */
+/* eslint-disable react/react-in-jsx-scope */
 import { render, screen, waitFor } from '@testing-library/react';
 import {
     QueryClient,
@@ -24,8 +26,8 @@ const defaultProps = [
 
 const renderThemed = (props) => render(<CornponentsTheme><QueryClientProvider client={queryClient}><App {...props}/></QueryClientProvider></CornponentsTheme>)
 
-test('display users', async () => {
+test('loader is removed from app', async () => {
     renderThemed(...defaultProps)
-
+    
     await waitFor(() => expect(screen.queryByTestId('loader')).not.toBeInTheDocument());
 })
